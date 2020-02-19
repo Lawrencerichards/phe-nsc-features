@@ -1,0 +1,242 @@
+{% extends "template.njk" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/unbranded.ico?0.18.3" type="image/x-icon" />
+  <link rel="mask-icon" href="{{ asset_path }}images/gov.uk_logotype_crown.svg?0.18.3" color="#0b0c0c">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset_path }}images/apple-touch-icon-152x152.png?0.18.3">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset_path }}images/apple-touch-icon-120x120.png?0.18.3">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ asset_path }}images/apple-touch-icon-76x76.png?0.18.3">
+  <link rel="apple-touch-icon-precomposed" href="{{ asset_path }}images/apple-touch-icon-60x60.png?0.18.3">
+{% endblock %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block header %}
+<div class="phe-header__container govuk-header__container govuk-width-container">
+  <div class="phe-header">
+    <img src="{{ asset_path }}images/phe_nsc_logo.jpg" class="phe-logo"></img>
+  </div>
+
+  <h2 class="govuk-heading-l" style="margin-top: 50px; margin-bottom: 50px;">End-to-end journey</h2>
+
+  <div class="policy-display" style="margin-bottom: 50px;">
+    <img src="/public/images/topup-work.png" alt="" style="height: 440px;">
+      <ul>
+        <li><a href="/topup/homepage.html">Public facing user journey</a></li>
+        <li><a href="/v4/index.html">Admin facing user journey</a></li>
+      </ul>
+  </div>
+
+  <h2 class="govuk-heading-m" style="margin-top: 100px; margin-bottom: 50px;">Project prototypes and iterations</h2>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/v2.png" style="width: 490px; height: 500px;">
+      <div class="text">
+        <a href="/v2/index.html" class="govuk-link">Version 1</a>
+        <ul>
+          <li>GDS components without GOV UK branding</li>
+          <li>Admin dashboard, only review process</li>
+          <li>Review dashboard in table form, showing stage of process</li>
+          <li>Form error messages</li>
+          <li>Save consultation and email stakeholders function</li>
+        </ul>
+        <p>“It’s much more simple than the current legacy site”</p>
+        <p>“It would be really useful if we could open a consultation in the future as well”</p>
+        <p>“I like having a more linear process to go through, rather than tabs that are on the legacy site”</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/v1.png" style="width: 500px; height: 500px;">
+      <div class="text">
+        <a href="/docs/v1/index.html" class="govuk-link">Version 2</a>
+        <ul>
+          <li>GOV UK branding</li>
+          <li>Admin dashboard, only review process</li>
+          <li>Review dashboard in list form</li>
+          <li>Overview of review process in checklist form</li>
+        </ul>
+        <p>“I like the checklist element, it gives us an idea of where we are in our work”</p>
+        <p>“Nice and simple overall, especially for newcomers”</p>
+        <p>“It would be useful to be able to add NSC meeting dates”</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/v3.png" style="width: 490px; height: 500px;">
+      <div class="text">
+        <a href="/v3/index.html" class="govuk-link">Version 3</a>
+        <ul>
+          <li>GOV UK branding</li>
+          <li>Admin dashboard, review process and policy pages</li>
+          <li>Review dashboard in table form, showing stage of process</li>
+          <li>Overview of review process in checklist form</li>
+          <li>Save consultation and email stakeholders function</li>
+          <li>Can delay opening consultations</li>
+          <li>Policy pages have some information locked in</li>
+          <li>Can preview a policy page before publishing it</li>
+        </ul>
+        <p>“I like the clear layout”</p>
+        <p>“There needs to be more flexibility about what you can add to a policy page”</p>
+        <p>"The final section should be condensed into one link”</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/v4.png" style="width: 490px; height: 500px;">
+      <div class="text">
+        <a href="/v4/index.html" class="govuk-link">Version 4</a>
+        <ul>
+          <li>Clarification of delaying opening consultations</li>
+          <li>Clarification at end of the review process</li>
+          <li>Form error messages</li>
+          <li>Post-consultation stages condensed</li>
+        </ul>
+        <p>"It would be useful to be able to see all current conditions under review, not just my own"</p>
+        <p>"We need to be able to upload multiple external reviews"</p>
+        <p>"The steps through the review process could be made clearer by not activating the links until the previous step has been completed"</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/search_a.png" style="width: 490px; height: 500px;">
+      <div class="text">
+        <a href="/search_a" class="govuk-link">Search A</a>
+        <ul>
+          <li>Ability to search through the conditions only by name</li>
+          <li>Search box only</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/search_b.png" style="width: 490px; height: 500px;">
+      <div class="text">
+        <a href="/search_b" class="govuk-link">Search B</a>
+        <ul>
+          <li>Ability to search through the conditions by name, type, and status</li>
+          <li>Search box and filters</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/search_a.png" style="width: 490px; height: 500px;">
+      <div class="text">
+        <a href="/search_c" class="govuk-link">Search C</a>
+        <ul>
+          <li>Ability to search through the conditions by name and type</li>
+          <li>Search box only</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/feedback.png" style="width:490px; height: 500px;">
+      <div class="text">
+        <a href="/consultation-feedback-1/form" class="govuk-link">Consultation feedback form</a>
+        <ul>
+          <li>Form for uploading or entering consultation feedback</li>
+          <li>GOV UK components</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/sma-html.png" style="width:490px; height: 500px;">
+      <div class="text">
+        <a href="/SMA-prototype/sma" class="govuk-link">SMA HTML page</a>
+        <ul>
+          <li>HTML policy page for testing accessibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="policy-display">
+      <img src="/public/images/homepage.png" style="width:490px; height: 500px;">
+      <div class="text">
+        <a href="/end-to-end/homepage.html" class="govuk-link">Version 5</a>
+        <ul>
+          <li>Prototype end-to-end public facing journey (end-Alpha phase)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <br>
+
+  <div style="text-align:center" class="grey-line margined">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+  </div>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  // Thumbnail image controls
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
